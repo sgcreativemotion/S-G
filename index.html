@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S&amp;G Creative Motion — Sites, Social Media e Tráfego Pago</title>
+<meta name="description" content="A S&amp;G Creative Motion cria presença digital que gera resultado: sites institucionais e catálogos, mais gestão de Instagram e tráfego pago com Schelen Marques.">
+<meta property="og:title" content="S&amp;G Creative Motion">
+<meta property="og:description" content="Estratégia, conteúdo e sites que fazem o seu negócio alcançar resultados.">
+<meta property="og:type" content="website">
+<link rel="icon" href="./assets/logo-sg.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F4EF;
+    --paper-raised:#FFFFFF;
+    --ink:#152238;
+    --ink-soft:#4A5670;
+    --ink-faint:#8890A2;
+    --line:#DAD7CC;
+    --gold:#D89A2C;
+    --gold-deep:#A9700F;
+    --navy-deep:#0F1B30;
+    --green:#2F7A5C;
+    --green-deep:#245E47;
+    --rose:#B8776E;
+    --rose-deep:#8C5850;
+    --rose-tint:#F3E9E6;
+    --radius:2px;
+    --wrap:1060px;
+    --nav-h:72px;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --paper:#12192A;
+      --paper-raised:#1A2338;
+      --ink:#EDEFF4;
+      --ink-soft:#B7BFD1;
+      --ink-faint:#7E8AA3;
+      --line:#2C3652;
+      --navy-deep:#080D18;
+      --rose-tint:#2A2020;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#12192A;
+    --paper-raised:#1A2338;
+    --ink:#EDEFF4;
+    --ink-soft:#B7BFD1;
+    --ink-faint:#7E8AA3;
+    --line:#2C3652;
+    --navy-deep:#080D18;
+    --rose-tint:#2A2020;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Manrope', -apple-system, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    padding-top:var(--nav-h);
+  }
+  ::selection{ background:var(--gold); color:var(--navy-deep); }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  section{ scroll-margin-top:var(--nav-h); }
+
+  .wrap{ max-width:var(--wrap); margin:0 auto; padding:0 28px; }
+
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:fixed;
+    top:0; left:0; right:0;
+    height:var(--nav-h);
+    background:var(--paper-raised);
+    border-bottom:1px solid var(--line);
+    z-index:100;
+  }
+  .nav .wrap{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .nav-brand{ display:flex; align-items:center; gap:10px; text-decoration:none; flex:none; }
+  .nav-brand img{ height:34px; width:auto; }
+  .nav-brand span{ font-family:'Fraunces', serif; font-size:17px; font-weight:500; color:var(--ink); white-space:nowrap; }
+  .nav-links{ display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
+  .nav-links a{
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink-soft);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{ color:var(--ink); }
+  .nav-cta{ flex:none; }
+  .nav-cta .btn{ padding:10px 18px; font-size:13.5px; }
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    padding:14px 26px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    border:1px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .btn:active{ transform:translateY(1px); }
+  .btn-primary{ background:var(--green); color:#fff; }
+  .btn-primary:hover{ background:var(--green-deep); }
+  .btn-rose{ background:var(--rose); color:#fff; }
+  .btn-rose:hover{ background:var(--rose-deep); }
+  .btn-ghost{
+    background:transparent;
+    border-color:var(--line);
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .btn-ghost:hover{ border-color:var(--ink-faint); color:var(--ink); }
+
+  /* ---------- SECTION LABEL ---------- */
+  .eyebrow{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:16px;
+    color:var(--gold-deep);
+    margin-bottom:22px;
+    display:inline-block;
+  }
+  .eyebrow.rose{ color:var(--rose-deep); }
+  .section-head{
+    padding:64px 0 28px;
+    max-width:560px;
+  }
+  .section-head h2{
+    font-size:clamp(26px, 3vw, 32px);
+    margin-bottom:10px;
+  }
+  .section-head p{
+    color:var(--ink-soft);
+    font-size:15.5px;
+  }
+
+  /* ---------- HOME HERO ---------- */
+  .hero{
+    position:relative;
+    padding:88px 0 64px;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity:0.35;
+    mask-image: radial-gradient(ellipse 900px 420px at 15% 10%, black, transparent 70%);
+    pointer-events:none;
+  }
+  .hero-inner{ position:relative; max-width:640px; }
+  .hero h1{
+    font-size:clamp(32px, 4.4vw, 48px);
+    line-height:1.14;
+    margin-bottom:22px;
+  }
+  .hero p{
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:480px;
+    margin-bottom:36px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+
+  /* ---------- SERVICE PILLARS (home) ---------- */
+  .pillars{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    padding:44px 0 8px;
+  }
+  .pillar{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    padding:30px 28px;
+    text-decoration:none;
+    display:block;
+    transition:border-color .15s ease;
+  }
+  .pillar:hover{ border-color:var(--ink-faint); }
+  .pillar-kicker{ font-size:12.5px; font-weight:700; letter-spacing:.03em; color:var(--ink-faint); margin-bottom:10px; }
+  .pillar h3{ font-size:21px; margin-bottom:8px; }
+  .pillar p{ font-size:14.5px; color:var(--ink-soft); margin-bottom:16px; }
+  .pillar-link{ font-size:13.5px; font-weight:700; }
+  .pillar-link.gold{ color:var(--gold-deep); }
+  .pillar-link.rose{ color:var(--rose-deep); }
+
+  /* ---------- RESULTS / CASES ---------- */
+  .results{ padding:20px 0 84px; }
+  .case-card{
+    background:var(--navy-deep);
+    color:#F2F1EC;
+    padding:40px 36px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:32px;
+    flex-wrap:wrap;
+  }
+  .case-stat{ display:flex; align-items:baseline; gap:8px; flex:none; }
+  .case-stat .num{ font-family:'Fraunces', serif; font-size:56px; color:var(--gold); line-height:1; }
+  .case-stat .num-label{ font-size:13px; color:#A7AEC2; max-width:110px; line-height:1.3; }
+  .case-body{ flex:1; min-width:240px; }
+  .case-body .case-client{ font-weight:700; font-size:14px; color:var(--gold); margin-bottom:6px; letter-spacing:.02em; }
+  .case-body p{ font-size:15.5px; color:#D8DCE8; max-width:440px; }
+  .case-fineprint{ font-size:12px; color:#7C86A0; margin-top:10px; }
+
+  /* ---------- SCHELEN / MÍDIA ---------- */
+  .midia-section{ background:var(--rose-tint); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .midia-head{
+    padding:64px 0 10px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .midia-avatar{
+    width:76px; height:76px;
+    border-radius:50%;
+    overflow:hidden;
+    flex:none;
+    border:2px solid var(--paper-raised);
+    box-shadow:0 0 0 1px var(--line);
+  }
+  .midia-avatar img{ width:100%; height:100%; object-fit:cover; }
+  .midia-who .midia-name{ font-family:'Fraunces', serif; font-size:19px; color:var(--ink); }
+  .midia-who .midia-role{ font-size:13px; color:var(--rose-deep); font-weight:700; letter-spacing:.02em; }
+  .midia-section .section-head{ padding-top:10px; max-width:600px; }
+
+  .midia-plans{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    padding:18px 0 8px;
+  }
+  .midia-payment{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+    align-items:center;
+    padding:26px 0 76px;
+    font-size:13.5px;
+    color:var(--ink-faint);
+  }
+  .midia-payment strong{ color:var(--ink-soft); font-weight:700; }
+
+  /* ---------- PRICING CARD (reused for Sites + Schelen) ---------- */
+  .plan{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    padding:36px 32px 32px;
+    position:relative;
+  }
+  .plan::before{
+    content:"";
+    position:absolute;
+    top:14px; left:14px;
+    width:10px; height:10px;
+    border-top:1.5px solid var(--gold);
+    border-left:1.5px solid var(--gold);
+  }
+  .plan::after{
+    content:"";
+    position:absolute;
+    bottom:14px; right:14px;
+    width:10px; height:10px;
+    border-bottom:1.5px solid var(--gold);
+    border-right:1.5px solid var(--gold);
+  }
+  .plan.rose::before, .plan.rose::after{ border-color:var(--rose); }
+  .plan-kicker{ font-size:13px; color:var(--ink-faint); font-weight:600; margin-bottom:6px; }
+  .plan h3{ font-size:26px; margin-bottom:14px; }
+  .plan-price{ font-family:'Fraunces', serif; font-size:34px; color:var(--ink); margin-bottom:4px; }
+  .plan-price sup{ font-size:16px; top:-14px; position:relative; margin-right:2px; color:var(--ink-faint); font-family:'Manrope',sans-serif; }
+  .plan-price .per{ font-size:15px; color:var(--ink-faint); font-family:'Manrope',sans-serif; }
+  .plan-note{ font-size:13.5px; color:var(--ink-faint); margin-bottom:20px; }
+  .plan-desc{ font-size:14.5px; color:var(--ink-soft); margin-bottom:24px; padding-bottom:24px; border-bottom:1px solid var(--line); }
+  .plan-features{ list-style:none; }
+  .plan-features li{ display:flex; gap:11px; align-items:flex-start; font-size:14.5px; color:var(--ink); padding:8px 0; }
+  .plan-features svg{ flex:none; margin-top:3px; }
+  .plan-features .stroke{ stroke:var(--green); }
+  .plan.rose .plan-features .stroke{ stroke:var(--rose); }
+
+  .plan-cta{
+    display:block;
+    text-align:center;
+    margin-top:26px;
+    padding:13px;
+    border:1px solid var(--ink);
+    font-weight:700;
+    font-size:14.5px;
+    text-decoration:none;
+    color:var(--ink);
+    transition:background .15s ease, color .15s ease;
+  }
+  .plan-cta:hover{ background:var(--ink); color:var(--paper-raised); }
+  .plan.rose .plan-cta{ border-color:var(--rose-deep); color:var(--rose-deep); }
+  .plan.rose .plan-cta:hover{ background:var(--rose-deep); color:#fff; }
+
+  /* ---------- SITES INTRO ---------- */
+  .sites-section{ padding-top:6px; }
+  .sites-hero{ padding:64px 0 12px; max-width:640px; }
+  .sites-hero h2{ font-size:clamp(28px, 3.6vw, 38px); line-height:1.16; margin-bottom:18px; }
+  .sites-hero p{ font-size:16px; color:var(--ink-soft); max-width:480px; }
+
+  .plans{ display:grid; grid-template-columns:1fr 1fr; gap:22px; padding:36px 0 20px; }
+
+  /* ---------- MAINTENANCE ---------- */
+  .maint{ margin:20px 0 80px; border:1px dashed var(--line); padding:40px 36px; }
+  .maint-top{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:28px; }
+  .maint-top h2{ font-size:23px; margin-bottom:8px; }
+  .maint-top p{ color:var(--ink-soft); font-size:14.5px; max-width:420px; }
+  .maint-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
+  .maint-item{ background:var(--paper-raised); padding:24px 26px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+  .maint-item-name{ font-weight:700; font-size:15px; }
+  .maint-item-desc{ font-size:13px; color:var(--ink-faint); margin-top:4px; }
+  .maint-item-price{ font-family:'Fraunces', serif; font-size:21px; white-space:nowrap; }
+  .maint-item-price span{ font-size:12px; color:var(--ink-faint); font-family:'Manrope',sans-serif; }
+
+  /* ---------- CLOSING CTA ---------- */
+  .closing{ background:var(--navy-deep); color:#F2F1EC; padding:72px 0; }
+  .closing-inner{ display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap; }
+  .closing h2{ color:#F2F1EC; font-size:clamp(24px, 3vw, 30px); max-width:440px; }
+  .closing p{ color:#A7AEC2; font-size:14.5px; margin-top:10px; max-width:400px; }
+
+  footer{ padding:26px 0 40px; font-size:12.5px; color:var(--ink-faint); text-align:center; }
+  footer a{ color:var(--ink-soft); font-weight:600; text-decoration:none; }
+
+  @media (max-width:760px){
+    :root{ --nav-h:60px; }
+    .nav .wrap{ padding:0 16px; gap:10px; }
+    .nav-links{ gap:14px; }
+    .nav-links a{ font-size:13px; }
+    .nav-brand span{ display:none; }
+    .nav-cta .btn{ padding:9px 14px; font-size:12.5px; gap:5px; }
+    .hero, .sites-hero{ padding-top:48px; }
+    .pillars, .midia-plans, .plans{ grid-template-columns:1fr; }
+    .maint-grid{ grid-template-columns:1fr; }
+    .closing-inner{ flex-direction:column; align-items:flex-start; }
+    .maint{ padding:28px 22px; }
+    .case-card{ padding:32px 26px; }
+    .case-stat .num{ font-size:44px; }
+  }
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a class="nav-brand" href="#home">
+        <img src="./assets/logo-sg.png" alt="S&amp;G Creative Motion">
+        <span>S&amp;G Creative Motion</span>
+      </a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#midia">Mídia</a>
+        <a href="#sites">Sites</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="https://wa.me/5547992337577" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- 1 · HOME — Sobre a S&G                                        -->
+  <!-- ============================================================ -->
+  <section id="home">
+    <div class="hero">
+      <div class="wrap">
+        <div class="hero-inner">
+          <span class="eyebrow">S&amp;G Creative Motion</span>
+          <h1>Seu negócio vendendo mais</h1>
+          <p>Estratégia, conteúdo e presença digital em um só lugar. 
+
+</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://wa.me/5547992337577" target="_blank" rel="noopener">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M17.6 6.3A8.9 8.9 0 0 0 4.2 17.4L3 21l3.7-1.2A8.9 8.9 0 1 0 17.6 6.3Z" stroke="white" stroke-width="1.6"/><path d="M8.7 8.6c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4.2.5.6 1.5.7 1.6.1.1.1.3 0 .5-.1.2-.2.3-.3.4l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.3.1.4.3.1.2.1.9-.2 1.4s-1.4 1-2 1c-.5 0-1.9-.2-3.6-1.5-2.1-1.6-3.4-3.7-3.5-3.9-.1-.2-.9-1.2-.9-2.3 0-1.1.6-1.6.8-1.9Z" fill="white"/></svg>
+              Falar no WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#servicos">Ver nossos serviços</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div id="servicos" class="section-head" style="padding-top:56px;">
+        <h2>O que fazemos</h2>
+        <p>Dois pilares que trabalham juntos: presença no Instagram todos os dias e um site que vende mesmo fora do horário comercial.</p>
+      </div>
+      <div class="pillars">
+        <a class="pillar" href="#midia">
+          <div class="pillar-kicker">01 · GESTÃO DE REDES</div>
+          <h3>Mídia &amp; Tráfego Pago</h3>
+          <p>Conteúdo, agendamento e anúncios pra sua marca aparecer e vender no Instagram, com Schelen Marques.</p>
+          <span class="pillar-link rose">Ver planos de mídia →</span>
+        </a>
+        <a class="pillar" href="#sites">
+          <div class="pillar-kicker">02 · PRESENÇA DIGITAL</div>
+          <h3>Sites</h3>
+          <p>Site institucional ou catálogo de produtos, no ar, representando sua empresa 24 horas por dia.</p>
+          <span class="pillar-link gold">Ver planos de site →</span>
+        </a>
+      </div>
+
+      <div class="results">
+        <div class="section-head" style="padding-bottom:24px;">
+          <h2>Resultados reais</h2>
+          <p>Não é só teoria — é negócio de verdade crescendo com a nossa assessoria.</p>
+        </div>
+        <!-- Para adicionar outro case, duplique o bloco .case-card e ajuste os dados -->
+        <div class="case-card">
+          <div class="case-stat">
+            <span class="num">+47%</span>
+            <span class="num-label">de faturamento</span>
+          </div>
+          <div class="case-body">
+            <div class="case-client">MOTOCARVILLE</div>
+            <p>Aumentou o faturamento em 47% depois de estruturar sua presença digital com a assessoria da S&amp;G Creative Motion.</p>
+            <div class="case-fineprint">Resultado informado pelo cliente.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 2 · MÍDIA & TRÁFEGO PAGO — Schelen Marques                   -->
+  <!-- ============================================================ -->
+  <section id="midia" class="midia-section">
+    <div class="wrap">
+      <div class="midia-head">
+        <div class="midia-avatar">
+          <img src="./assets/schelen-avatar.png" alt="Foto de Schelen Marques" loading="lazy" width="76" height="76">
+        </div>
+        <div class="midia-who">
+          <div class="midia-name">Schelen Marques</div>
+          <div class="midia-role">SOCIAL MEDIA</div>
+        </div>
+      </div>
+      <div class="section-head">
+        <span class="eyebrow rose">Mídia &amp; Tráfego Pago</span>
+        <h2>Seu Instagram em boas mãos</h2>
+        <p>Estratégia, conteúdo humanizado e tráfego pago pra sua marca crescer todos os dias — sem você precisar aparecer atrás das telas.</p>
+      </div>
+
+      <div class="midia-plans">
+        <div class="plan rose">
+          <div class="plan-kicker">Você filma, ela edita</div>
+          <h3>Gestão Essencial</h3>
+          <div class="plan-price"><sup>R$</sup>1.000,00 <span class="per">/mês</span></div>
+          <div class="plan-note">Cobrança mensal</div>
+          <p class="plan-desc">Pra quem já produz o próprio material e quer alguém pra organizar, editar e colocar tudo pra rodar — com anúncios inclusos.</p>
+          <ul class="plan-features">
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>8 posts (carrossel ou estático)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>4 reels editados (você filma, ela edita)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Publicação e agendamento do mês</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Gestão do Instagram com sugestões de posts</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Tráfego pago incluso (2 campanhas: vendas e alcance)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Relatório mensal de resultados</li>
+          </ul>
+          <a class="plan-cta" href="https://wa.me/5547984121484" target="_blank" rel="noopener">Quero este</a>
+        </div>
+
+        <div class="plan rose">
+          <div class="plan-kicker">Produção completa</div>
+          <h3>Gestão Completa</h3>
+          <div class="plan-price"><sup>R$</sup>1.780,00 <span class="per">/mês</span></div>
+          <div class="plan-note">Cobrança mensal</div>
+          <p class="plan-desc">Pra quem quer tirar o próprio bolso da frente das câmeras: Schelen vai até o seu espaço, grava e cuida de tudo.</p>
+          <ul class="plan-features">
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>20 posts personalizados</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>20 reels dinâmicos do dia a dia e da equipe</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>40 stories por mês (2 por dia)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Produção presencial no seu espaço</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Agendamento total do mês</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Acompanhamento de desempenho e suporte</li>
+          </ul>
+          <div class="plan-note" style="margin-top:-8px; margin-bottom:0;">Tráfego pago (anúncios) cobrado à parte.</div>
+          <a class="plan-cta" href="https://wa.me/5547984121484" target="_blank" rel="noopener">Quero este</a>
+        </div>
+      </div>
+
+      <div class="midia-payment">
+        <span><strong>Formas de pagamento:</strong> Pix</span>
+        <span>·</span>
+        <span>Cartão em até 12x</span>
+        <span>·</span>
+        <span>Crédito na plataforma</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 3 · SITES                                                     -->
+  <!-- ============================================================ -->
+  <section id="sites" class="sites-section">
+    <div class="wrap">
+      <div class="sites-hero">
+        <span class="eyebrow">Sites</span>
+        <h2>Um site bem feito vende antes mesmo de alguém falar com você.</h2>
+        <p>Enquanto o concorrente depende só de indicação, seu cliente já te encontrou, viu seu trabalho e decidiu confiar. É isso que um site profissional faz — sozinho, 24 horas por dia.</p>
+      </div>
+
+      <div class="section-head">
+        <h2>Dois formatos, um objetivo: seu negócio online.</h2>
+        <p>Escolha o modelo que combina com o momento da sua empresa — apresentar o trabalho ou vender produto direto pelo site.</p>
+      </div>
+
+      <div class="plans">
+        <div class="plan">
+          <div class="plan-kicker">Presença profissional</div>
+          <h3>Institucional</h3>
+          <div class="plan-price"><sup>R$</sup>1.498,00</div>
+          <div class="plan-note">Pagamento único</div>
+          <p class="plan-desc">Para quem precisa marcar presença e passar confiança já no primeiro clique.</p>
+          <ul class="plan-features">
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>1 página completa</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Apresentação da empresa</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Vitrine de serviços</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Galeria de fotos</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Botão de WhatsApp integrado</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Localização</li>
+          </ul>
+          <a class="plan-cta" href="https://wa.me/5547992337577" target="_blank" rel="noopener">Quero este</a>
+        </div>
+
+        <div class="plan">
+          <div class="plan-kicker">Venda direta</div>
+          <h3>Catálogo</h3>
+          <div class="plan-price"><sup>R$</sup>1.987,00</div>
+          <div class="plan-note">Pagamento único</div>
+          <p class="plan-desc">Para quem vende produtos e quer que o cliente veja, filtre e escolha sozinho.</p>
+          <ul class="plan-features">
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>1 ou 2 páginas</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Catálogo completo de produtos</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Filtros por categoria</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Busca de produtos</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Estrutura para adicionar e remover produtos</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path class="stroke" d="M3 8.5 6.5 12 13 4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Opção de plano mensal para quem prefere não mexer</li>
+          </ul>
+          <a class="plan-cta" href="https://wa.me/5547992337577" target="_blank" rel="noopener">Quero este</a>
+        </div>
+      </div>
+
+      <div class="maint">
+        <div class="maint-top">
+          <div>
+            <h2>O site no ar é só o começo</h2>
+            <p>Preço, produto e texto mudam com o tempo. A manutenção mensal mantém tudo atualizado sem você precisar mexer em nada.</p>
+          </div>
+        </div>
+        <div class="maint-grid">
+          <div class="maint-item">
+            <div>
+              <div class="maint-item-name">Catálogo</div>
+              <div class="maint-item-desc">Monitoramento, textos, imagens e produtos (adicionar/remover)</div>
+            </div>
+            <div class="maint-item-price">R$ 500<span>/mês</span></div>
+          </div>
+          <div class="maint-item">
+            <div>
+              <div class="maint-item-name">Institucional</div>
+              <div class="maint-item-desc">Monitoramento, atualização de textos e imagens</div>
+            </div>
+            <div class="maint-item-price">R$ 200<span>/mês</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="closing">
+      <div class="wrap closing-inner">
+        <div>
+          <h2>Vamos colocar seu negócio no ar?</h2>
+          <p>Me chama no WhatsApp e eu te digo qual plano faz mais sentido pro seu momento.</p>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/5547992337577" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M17.6 6.3A8.9 8.9 0 0 0 4.2 17.4L3 21l3.7-1.2A8.9 8.9 0 1 0 17.6 6.3Z" stroke="white" stroke-width="1.6"/><path d="M8.7 8.6c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4.2.5.6 1.5.7 1.6.1.1.1.3 0 .5-.1.2-.2.3-.3.4l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.3.1.4.3.1.2.1.9-.2 1.4s-1.4 1-2 1c-.5 0-1.9-.2-3.6-1.5-2.1-1.6-3.4-3.7-3.5-3.9-.1-.2-.9-1.2-.9-2.3 0-1.1.6-1.6.8-1.9Z" fill="white"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    S&amp;G Creative Motion · Valores válidos para escopo padrão descrito acima. Personalizações adicionais são orçadas à parte.<br>
+    Planos de mídia com <a href="https://wa.me/5547984121484" target="_blank" rel="noopener">Schelen Marques</a>.
+  </footer>
+
+</body>
+</html>
